@@ -1,5 +1,3 @@
-#计算机172班  1520173186   赖炳铮
-
 import xlrd
 import xlsxwriter
 import sqlite3
