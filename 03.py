@@ -4,6 +4,8 @@ import sqlite3
 import json
 import csv
 
+
+    ###读写CSV文件###
 def readCSV():
     in_cvs = csv.reader(open('out_csv.csv', 'r'))
     for i in in_cvs:
@@ -20,6 +22,8 @@ def writeCSV(ls):
         con.writerow(list)
     out_csv.close()
 
+    
+    ###读写Json文件###
 def readJSON():
     in_json = open("out_rk.json", "r", encoding="gbk")
     ls = json.load(in_json)
@@ -35,6 +39,8 @@ def writeJSON(ls):
     json.dump(ls[1:], out_json, sort_keys = True, indent = 5, ensure_ascii = False)
     out_json.close()
 
+    
+    ###读写Excel文件###
 def readEXCEL():
     in_wb = xlrd.open_workbook("rk_scores.xlsx")
     ws = in_wb.sheet_by_index(0)
@@ -55,6 +61,7 @@ def writeEXCEL(ls):
             ws.write_row("A" + str(i + 1), ls[i], color)
     out_wb.close()
 
+    ###读写数据库###
 def readSQLite():
     con = sqlite3.connect("rk.db")
     cur = con.cursor()
