@@ -1,73 +1,75 @@
-# s = "abcdef"
-# print(s[1:3])
-# print(s[3:10])
-# print(s[8:2])
-# print(s[:])
-# print(s[:2])
-# print(s[::2])
-# print(s[::-1])
-#
-#
-#
-#
-# t = ('a','e','i','o','u')
-# print(t[-2:-1])
-# print(t[-2:])
-# print(t[-99:-5])
-# print(t[-99:-3])
-# print(t[::])
-# print(t[1:-1])
-# print(t[1::2])
-#
-#
-#
-#
-# lst = [1,2,3,4,5]
-# print(lst[:2])
-# lst[:1] = []
-# print(lst)
-# print(lst[:2])
-# lst[:2] = 'a'
-# lst[1:] = 'b'
-# print(lst)
-# del lst[:1]
-# print(lst)
-#
-#
-# x = [3, 5, 7]
-# x[1:] = [2]
-# print(x)
-#
-# x = [3, 5, 7]
-# x[:3] = [2]
-# print(x)
-#
-# numbers = {}
-# numbers[(1,2,3)] = 1
-# numbers[(1,2)] = 2
-# numbers[(2,1)] = 3
-# sum = 0
-# for k in numbers:
-#     sum += numbers[k]
-#     print(len(numbers), '', sum, '', numbers)
-#
-
-# import jieba
-# s = "中国70周年"
-# print(jieba.lcut(s))
+s = "abcdef"
+print(s[1:3])
+print(s[3:10])
+print(s[8:2])
+print(s[:])
+print(s[:2])
+print(s[::2])
+print(s[::-1])
 
 
 
-# fo = open("price2016.csv","r")
-# ls = []
-# for line in fo:
-#     line = line.replace("\n", "")
-#     ls = line.split(",")
-#     lns = ""
-#     for s in ls:
-#         lns += "{}\t".format(s)
-#     print(lns)
-# fo.close()
+
+t = ('a','e','i','o','u')
+print(t[-2:-1])
+print(t[-2:])
+print(t[-99:-5])
+print(t[-99:-3])
+print(t[::])
+print(t[1:-1])
+print(t[1::2])
+
+
+
+
+lst = [1,2,3,4,5]
+print(lst[:2])
+lst[:1] = []
+print(lst)
+print(lst[:2])
+lst[:2] = 'a'
+lst[1:] = 'b'
+print(lst)
+del lst[:1]
+print(lst)
+
+
+x = [3, 5, 7]
+x[1:] = [2]
+print(x)
+
+x = [3, 5, 7]
+x[:3] = [2]
+print(x)
+
+
+numbers = {}
+numbers[(1,2,3)] = 1
+numbers[(1,2)] = 2
+numbers[(2,1)] = 3
+sum = 0
+for k in numbers:
+    sum += numbers[k]
+    print(len(numbers), '', sum, '', numbers)
+
+
+import jieba
+s = "中国70周年"
+print(jieba.lcut(s))
+
+
+
+fo = open("price2016.csv","r")
+ls = []
+for line in fo:
+    line = line.replace("\n", "")
+    ls = line.split(",")
+    lns = ""
+    for s in ls:
+        lns += "{}\t".format(s)
+    print(lns)
+fo.close()
+
 
 
 import sqlite3
