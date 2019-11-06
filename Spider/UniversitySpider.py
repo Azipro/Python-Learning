@@ -31,13 +31,13 @@ def getUniList(soup):
         Univ = []
         for td in ltd:
             Univ.append(td.string)
-        if Univ[2] == '江西':
+        if Univ[2] == '浙江':
              Uni.append(Univ)
              uni_top = []
              uni_top.append(Univ[1])
              uni_top.append(Univ[9])
              Uni_top.append(uni_top)
-        if Univ[1] == '南昌大学' or Univ[1] == '江西农业大学' or Univ[1] == '江西理工大学':
+        if Univ[1] == '浙江大学' or Univ[1] == '杭州电子科技大学' or Univ[1] == '浙江理工大学':
             Rank.append(Univ[0])
             Quality.append(Univ[4])
             Result.append(Univ[5])
@@ -62,7 +62,7 @@ def drawing_1(rank, quality, result, top):
                         textcoords = "offset points",
                         ha = 'center', va = 'bottom')
 
-    labels = ['南昌大学', '江西农业大学', '江西理工大学']
+    labels = ['浙江大学', '杭州电子科技大学', '浙江理工大学']
 
     x = np.arange(len(labels))
     width = 0.4
@@ -75,7 +75,7 @@ def drawing_1(rank, quality, result, top):
 
     matplotlib.rcParams['font.sans-serif'] = ['SimHei']
 
-    ax.set_title('南昌大学，江西农业大学，江西理工大学多指标柱状图')
+    ax.set_title('浙江大学，杭州电子科技大学，浙江理工大学多指标柱状图')
     ax.set_xticks(x)
     ax.set_xticklabels(labels)
     ax.legend()
@@ -97,7 +97,7 @@ def drawing_2(data):
         if int(i[1]) != 0:
             Labels.append(i[0])
             sizes.append(i[1])
-            if i[0] == '江西理工大学':
+            if i[0] == '浙江理工大学':
                 Explode.append(0.5)
             else:
                 Explode.append(0)
