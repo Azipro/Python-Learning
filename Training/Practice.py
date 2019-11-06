@@ -368,3 +368,57 @@ print(list(dict3))  #字典转列表
 print(list(str4)) #字符串转列表
 print(tuple(str4)) #字符串转元组
 print(dict(zip(str4[0::1], str4[1::1]))) #字符串转字典
+
+
+
+#A
+n = eval(input())
+sum = eval("0")
+for i in range(n):
+    if i % 2 == 0:
+        sum += eval("1 / (i + 1)")
+    else:
+        sum -= eval("1 / (i + 1)")
+print("{:.1f}".format(sum))
+
+
+
+#B
+for i in range(2):
+    val = input()
+    if val[-1] in ['D']:
+        x = 6.9 * float(val[0:-1])
+        print("%.1fR"%x)
+    elif val[-1] in ["R"]:
+        y = float(val[0:-1]) / 6.9
+        print("%.1fD"%y)
+    else:
+        print("error")
+
+
+
+#C
+for i in range(2):
+    x = input()
+    z = reversed(x)
+    if list(x) == list(z):
+        print("True")
+    else:
+        print("False")
+
+
+#D
+import math
+for i in range(3):
+    s = input()
+    x = s.split(",")
+    a = eval(x[0])
+    b = eval(x[1])
+    c = eval(x[2])
+    if (a + b > c) & (a + c > b) & (b + c > a):
+        C = a + b + c
+        S = math.sqrt(C / 2 * (C / 2 - a) * (C / 2 - b) * (C / 2 - c))
+        print("{:.1f},{:.1f}".format(C, S))
+    else:
+        print("无法构成三角形！")
+
