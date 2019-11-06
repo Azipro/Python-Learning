@@ -7,8 +7,8 @@ import lxml
 
 class jxustJw:
     def __init__(self):
-        self.username = '1520173186'
-        self.pwd = 'i20173186'
+        self.username = ''
+        self.pwd = ''
         self.headers = {
 
         }
