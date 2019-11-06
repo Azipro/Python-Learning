@@ -23,7 +23,7 @@ def getData(html):
     return data
 
 def main():
-    html = getHtml('江西理工大学')
+    html = getHtml('')
     ls = getData(html)
     for i in ls:
         print("{}".format(i))
