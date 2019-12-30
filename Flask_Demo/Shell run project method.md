@@ -4,7 +4,11 @@
 ```
 
 `-d` debug
+
 `-r` reload
+
 `-p` prot
+
 `-h` ip
+
 `--threaded` Multi-threaded access
